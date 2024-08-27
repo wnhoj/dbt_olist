@@ -91,3 +91,35 @@ models:
         data_tests:
           - not_null
 
+  - name: stg_olist__order_items
+    description: Information on the individual items contained in each order.
+    columns:
+      - name: order_id
+        description: Order identifier.
+        data_tests:
+          - not_null
+      - name: order_item_id
+        description: Sequential identifier indicating the number of items in the order.
+        data_tests:
+          - not_null
+      - name: product_id
+        description: Product identfier.
+        data_tests:
+          - not_null
+      - name: seller_id
+        description: Seller identifier.
+        data_tests:
+          - not_null
+      - name: shipping_limit_timestamp
+        description: Seller shipping limit date for passing the order to the carrier.
+        data_tests:
+          - not_null
+      - name: item_price
+        description: Individual item price in order.
+        data_tests:
+          - not_null
+      - name: item_freight_value
+        description: Item freight value. If an order has more than one item the freight value is divided between the items.
+        data_tests:
+          - not_null
+

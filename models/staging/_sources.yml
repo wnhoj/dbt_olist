@@ -66,3 +66,21 @@ sources:
             description: Location city
           - name: geolocation_state
             description: Location state
+
+      - name: order_items_dataset
+        description: Information on items purchased in each order. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data?select=olist_order_items_dataset.csv
+        columns:
+          - name: order_id
+            description: Unique order identifier.
+          - name: order_item_id
+            description: Sequential identifier indicating the number of items in the order.
+          - name: product_id
+            description: Unique product identifier.
+          - name: seller_id
+            description: Unique seller identifier.
+          - name: shipping_limit_date
+            description: Seller shipping limit date for passing the order to the carrier.
+          - name: price
+            description: Item price.
+          - name: freight_value
+            description: Item freight value. If an order has more than one item the freight value is divided between the items.
