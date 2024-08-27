@@ -18,3 +18,22 @@ sources:
             description: Customer city name.
           - name: customer_state
             description: Customer state.
+      - name: orders_dataset
+        description: Order information - core dataset. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_orders_dataset.csv
+        columns:
+          - name: order_id
+            description: Unique identifier of order.
+          - name: customer_id
+            description: Key to customer dataset. Each order has a unique customer_id.
+          - name: order_status
+            description: Reference to order status.
+          - name: order_purchase_timestamp
+            description: Purchase timestamp.
+          - name: order_approved_at
+            description: Payment approval timestamp.
+          - name: order_delivered_carrier_date
+            description: Order posting timestamp, i.e. when it was handed to the logistics partner.
+          - name: order_delivered_customer_date
+            description: Actual order delivery date.
+          - name: order_estimated_delivery_date
+            description: Estimate order delivery date at time of purchase.

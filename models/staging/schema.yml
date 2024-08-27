@@ -19,3 +19,30 @@ models:
         description: Customer city name.
       - name: customer_state
         description: Customer state.
+  - name: stg_olist__orders
+    description: Order information for all Olist orders
+    columns:
+      - name: order_id
+        description: Primary key of table. Unique identifier for each order
+        data_tests:
+          - unique
+          - not_null
+      - name: order_customer_id
+        description: Foreign key to customers. Each order has a unique order_customer_id.
+        data_tests:
+          - not_null
+      - name: order_status
+        description: Current status of order
+        data_tests:
+          - accepted_values:
+              values: ['created', 'shipped', 'approved', 'canceled', 'invoiced', 'delivered', 'processing', 'unavailable']
+      - name: order_purchase_timestamp
+        description: Timestamp when the order was made.
+      - name: order_approved_timestamp
+        description: Timestamp when the payment was approved.
+      - name: order_delivered_carrier_timestamp
+        description: Timestamp when order was handed to logistics partner
+      - name: order_delivered_timestamp
+        description: Timestamp when order was delivered to customer
+      - name: order_est_delivery_timestamp
+        description: Timestamp for estimated delivery date at the moment of purchase
