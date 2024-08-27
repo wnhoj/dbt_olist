@@ -47,6 +47,16 @@ models:
         description: Timestamp when order was delivered to customer
       - name: order_est_delivery_timestamp
         description: Timestamp for estimated delivery date at the moment of purchase
+      - name: minutes_purchase_to_approval
+        description: Minutes from time purchase is made to time order is approved.
+      - name: minutes_approval_to_carrier
+        description: Minutes from time order is approved to the time it is delivered to the customer.
+      - name: minutes_carrier_to_delivered
+        description: Minutes from time order delivered to carrier to when it is delivered to the customer.
+      - name: days_purchase_to_delivery
+        description: Days between purchase and delivery to customer.
+      - name: days_estimated_vs_actual_delivery
+        description: Days between estimated and actual delivery dates. A positive value indicates the order was delivered before its estimated delivery date.
 
   - name: stg_olist__payments
     description: Payment information for all Olist orders
