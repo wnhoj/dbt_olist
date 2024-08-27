@@ -18,6 +18,7 @@ sources:
             description: Customer city name.
           - name: customer_state
             description: Customer state.
+
       - name: orders_dataset
         description: Order information - core dataset. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_orders_dataset.csv
         columns:
@@ -37,6 +38,7 @@ sources:
             description: Actual order delivery date.
           - name: order_estimated_delivery_date
             description: Estimate order delivery date at time of purchase.
+
       - name: order_payments_dataset
         description: Order payment details. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_order_payments_dataset.csv
         columns:
@@ -50,3 +52,17 @@ sources:
             description: Number of payment installments chosen by the customer.
           - name: payment_value
             description: Transaction value
+
+      - name: geolocation_dataset
+        description: Information for Brazil zip codes
+        columns:
+          - name: geolocation_zip_code_prefix
+            description: First five digits of zip code.
+          - name: geolocation_lat
+            description: Location latitude
+          - name: geolocation_lng
+            description: Location longitude
+          - name: geolocation_city
+            description: Location city
+          - name: geolocation_state
+            description: Location state
