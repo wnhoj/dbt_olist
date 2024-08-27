@@ -84,3 +84,11 @@ sources:
             description: Item price.
           - name: freight_value
             description: Item freight value. If an order has more than one item the freight value is divided between the items.
+      
+      - name: product_category_name_translation
+        description: Translations for product category names. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data?select=product_category_name_translation.csv
+        columns:
+          - name: product_category_name
+            description: Portuguese category name.
+          - name: product_category_name_english
+            description: English category name.

@@ -123,3 +123,11 @@ models:
         data_tests:
           - not_null
 
+  - name: stg_olist__category_translations
+    description: Translations of product category names
+    columns:
+      - name: category_name_portuguese
+        description: Portuguese name of product category used in other data sources.
+      - name: category_name_english
+        description: English translation of product category.
+
