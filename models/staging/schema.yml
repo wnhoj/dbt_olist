@@ -146,3 +146,28 @@ models:
       - name: seller_state
         description: Seller state.
 
+  - name: stg_olist__products
+    description: Product information for all Olist products.
+    columns: 
+      - name: product_id
+        description: Unique product identifier.
+        data_tests:
+          - unique
+          - not_null
+      - name: product_category
+        description: Product category (Portuguese).
+      - name: product_name_length
+        description: Number of characters in product name.
+      - name: product_description_length.
+        description: Number of characters in product description.
+      - name: product_photos_qty
+        description: Number of photos in product listing. 
+      - name: product_weight_g
+        description: Product weight in grams.
+      - name: product_length_cm
+        description: Product length in centimeters.
+      - name: product_width_cm
+        description: Product width in centimeters.
+      - name: product_height_cm
+        description: Product height in centimeters.
+

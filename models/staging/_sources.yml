@@ -104,3 +104,25 @@ sources:
             description: Seller city.
           - name: seller_state
             description: Seller state.
+
+      - name: products_dataset
+        description: Product information. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data?select=olist_products_dataset.csv
+        columns:
+          - name: product_id
+            description: Unique product identifier.
+          - name: product_category_name
+            description: Product category (Portuguese).
+          - name: product_name_lenght
+            description: Number of characters in product name.
+          - name: product_description_lenght
+            description: Number of characters in product description.
+          - name: product_photos_qty
+            description: Number of photos in product listing. 
+          - name: product_weight_g
+            description: Product weight in grams
+          - name: product_length_cm
+            description: Product length in centimeters.
+          - name: product_width_cm
+            description: Product width in centimeters.
+          - name: product_height_cm
+            description: Product height in centimeters.
