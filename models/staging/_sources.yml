@@ -92,3 +92,15 @@ sources:
             description: Portuguese category name.
           - name: product_category_name_english
             description: English category name.
+
+      - name: sellers_dataset
+        description: Seller information. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data?select=olist_sellers_dataset.csv
+        columns: 
+          - name: seller_id
+            description: Unique identifier of seller.
+          - name: seller_zip_code_prefix
+            description: First five digits of seller zip code.
+          - name: seller_city
+            description: Seller city.
+          - name: seller_state
+            description: Seller state.

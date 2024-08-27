@@ -131,3 +131,18 @@ models:
       - name: category_name_english
         description: English translation of product category.
 
+  - name: stg_olist__sellers
+    description: Geographic information on all sellers.
+    columns:
+      - name: seller_id
+        description: Primary key. Unique seller identfier. 
+        data_tests:
+          - unique
+          - not_null
+      - name: seller_zip_code
+        description: First five digits of seller zip code.
+      - name: seller_city
+        description: Seller city.
+      - name: seller_state
+        description: Seller state.
+
