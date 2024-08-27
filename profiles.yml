@@ -1,0 +1,10 @@
+sql_refactor:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: triple-voyage-431902-i7
+      schema: dbt_olist
+      threads: 4
+      keyfile: ./secrets/bq-service-account.json
