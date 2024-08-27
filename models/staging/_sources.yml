@@ -37,3 +37,16 @@ sources:
             description: Actual order delivery date.
           - name: order_estimated_delivery_date
             description: Estimate order delivery date at time of purchase.
+      - name: order_payments_dataset
+        description: Order payment details. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_order_payments_dataset.csv
+        columns:
+          - name: order_id
+            description: Unique identifier of an order.
+          - name: payment_sequential
+            description: If a customer pays for an order with more than one payment method a sequence will be created. This indicates the payment in sequence
+          - name: payment_type
+            description: Payment method.
+          - name: payment_installments
+            description: Number of payment installments chosen by the customer.
+          - name: payment_value
+            description: Transaction value

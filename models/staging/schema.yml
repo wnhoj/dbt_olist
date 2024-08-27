@@ -46,3 +46,21 @@ models:
         description: Timestamp when order was delivered to customer
       - name: order_est_delivery_timestamp
         description: Timestamp for estimated delivery date at the moment of purchase
+  - name: stg_olist__payments
+    description: Payment information for all Olist orders
+    columns:
+      - name: order_id
+        description: Identifier for each order.
+        data_tests:
+          - not_null
+      - name: payment_sequential
+        description: Payment in sequence. If a customer pays for an order with more than one payment method then a sequence will be created.
+      - name: payment_method
+        description: Payment method.
+        data_tests:
+          - accepted_values:
+              values: ['credit_card', 'debit_card', 'voucher', 'boleto', 'not_defined']
+      - name: payment_installments
+        description: Number of payment installments chosen by the customer.
+      - name: payment_value
+        description: Transaction value.
