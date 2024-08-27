@@ -1,4 +1,4 @@
-sql_refactor:
+dbt_olist:
   target: dev
   outputs:
     dev:

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_olist__customers
+    description: Customer information for all Olist customers.
+    columns:
+      - name: order_customer_id
+        description: Primary key of table. Key to the orders dataset - each order has a unique customer_id.
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Unique customer identifier.
+        data_tests:
+          - not_null
+      - name: customer_zip_code
+        description: First five digits of customer zip code.
+      - name: customer_city
+        description: Customer city name.
+      - name: customer_state
+        description: Customer state.

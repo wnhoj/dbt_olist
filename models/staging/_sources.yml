@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: olist
+    database: triple-voyage-431902-i7
+    schema: olist
+    tables:
+      - name: customers_dataset
+        description: Dataset containing information about each customer and his/her location. https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_customers_dataset.csv
+        columns:
+          - name: customer_id
+            description: Key to the orders dataset. Each order has a unique customer_id.
+          - name: customer_unique_id
+            description: Unique customer identifier.
+          - name: customer_zip_code_prefix
+            description: First five digits of customer zip code.
+          - name: customer_city
+            description: Customer city name.
+          - name: customer_state
+            description: Customer state.
