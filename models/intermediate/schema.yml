@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: int_order_payments
+    description: Payment information aggregated at the order level.
+    columns:
+      - name: order_id
+        description: Primary key for table. Unique identifier for each order
+        data_tests:
+          - unique
+          - not_null
+      - name: total_number_of_payments
+        description: Number of payments made for an individual order.
+      - name: total_payment_value
+        description: Total monetary value for an order, including all payments
+
+  - name: int_orders
+    description: Expanded orders table, including the customer_id for each order
+    columns:
+      - name: customer_id
+        description: Customer identifier.
+      - name: order_id
+        description: Primary key of table. Unique identifier for each order
+        data_tests:
+          - unique
+          - not_null
+      - name: order_customer_id
+        description: Foreign key to customers. Each order has a unique order_customer_id.
+        data_tests:
+          - not_null
+      - name: order_status
+        description: Current status of order
+        data_tests:
+          - accepted_values:
+              values: ['created', 'shipped', 'approved', 'canceled', 'invoiced', 'delivered', 'processing', 'unavailable']
+      - name: order_purchase_timestamp
+        description: Timestamp when the order was made.
+      - name: order_approved_timestamp
+        description: Timestamp when the payment was approved.
+      - name: order_delivered_carrier_timestamp
+        description: Timestamp when order was handed to logistics partner
+      - name: order_delivered_timestamp
+        description: Timestamp when order was delivered to customer
+      - name: order_est_delivery_timestamp
+        description: Timestamp for estimated delivery date at the moment of purchase
+      - name: minutes_purchase_to_approval
+        description: Minutes from time purchase is made to time order is approved.
+      - name: minutes_approval_to_carrier
+        description: Minutes from time order is approved to the time it is delivered to the customer.
+      - name: minutes_carrier_to_delivered
+        description: Minutes from time order delivered to carrier to when it is delivered to the customer.
+      - name: days_purchase_to_delivery
+        description: Days between purchase and delivery to customer.
+      - name: days_estimated_vs_actual_delivery
+        description: Days between estimated and actual delivery dates. A positive value indicates the order was delivered before its estimated delivery date.
