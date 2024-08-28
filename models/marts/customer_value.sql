@@ -11,11 +11,11 @@ orders as (
 select 
   o.customer_id,
   sum(case 
-    when order_status in ('delivered', 'invoice') then p.total_payment_value
+    when order_status = 'delivered' then p.total_payment_value
     else 0
   end ) as completed_order_value,
   sum(case 
-    when order_status in ('created', 'approved', 'processing', 'shipped') then p.total_payment_value
+    when order_status in ('created', 'invoiced', 'approved', 'processing', 'shipped') then p.total_payment_value
     else 0
   end ) as pending_order_value,
   sum(case
