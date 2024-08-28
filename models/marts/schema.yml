@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: customer_value
+    description: Value metrics for customers including all orders and payments they have made through Olist
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+      - name: completed_order_value
+        description: Monetary value of all orders marked 'delivered' or 'invoiced'.
+      - name: pending_order_value
+        description: Monetary value of all orders marked 'created', 'approved', 'processing', or 'shipped'.
+      - name: lost_order_value
+        description: Monetary value of all orders marked 'canceled' or 'unavailable'
+      - name: number_of_orders
+        description: Count of the number of Olist orders made by the customer.
+      - name: first_order_date
+        description: Earliest order date.
+      - name: last_order_date
+        description: Most recent order date.
